@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "title": "Boost your leads",
+        "description": "Lorem ipsum dolor sit amet, consectetur",
+        "buttonText": "button",
+        "cta": ""
+    },
+    {
+        "id": 2,
+        "title": "Increase Engagement",
+        "description": "Maximize your reach and engagement with our solutions.",
+        "buttonText": "Learn More",
+        "cta": "Discover"
+    },
+    {
+        "id": 3,
+        "title": "Expand Your Network",
+        "description": "Connect with professionals and grow your network effectively.",
+        "buttonText": "Join Now",
+        "cta": "Join"
+    }
+]
