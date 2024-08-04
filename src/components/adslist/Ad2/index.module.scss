@@ -1,0 +1,67 @@
+.container {
+    color: whitesmoke;
+    height: 80vh;
+    max-height: 80vh;
+    width: 65vh;
+    max-width: 65vh;
+
+    .ad {
+        position: relative;
+        background-image: url(../../../assets/template2.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 100%;
+
+        .editIcon {
+            cursor: pointer;
+            position: absolute;
+            top: 5rem;
+            right: 10px;
+            height: 4vh;
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .textContent {
+            position: relative;
+            top: 6rem;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            left: 1rem;
+        }
+
+        .imageContent {
+            position: absolute;
+            bottom: 138px;
+            height: 26vh;
+            width: 72%;
+            left: 70px;
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .buttonSection {
+            position: absolute;
+            bottom: 7rem;
+            left: 5rem;
+
+            button {
+                background: none;
+                border: none;
+            }
+        }
+
+    }
+
+}

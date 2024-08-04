@@ -1,44 +1,37 @@
-"use client";
-import { AdProps } from "@/components/BannerImageComp";
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
-import Image from "next/image";
 import React from "react";
-import "../Ad1/index.scss";
+import styles from "../Ad3/index.module.scss";
+import { AdProps } from "@/components/BannerImageComp";
+import Image from "next/image";
+import demoImage from "../../../assets/ignazio-di-gangi-rPJ8tb3xzfk-unsplash.jpg";
 import Modal from "@/components/Modal";
 import EditBannerTemplateBs from "@/components/EditBannerTemplateBs";
+import pencil from "../../../assets/pen.png";
 
 interface Props {
   props: AdProps;
 }
 
-const Ad3: React.FC<Props> = ({ props }) => {
+const Ad2: React.FC<Props> = ({ props }) => {
   const [openEditModal, setOpenEditModal] = React.useState<boolean>(false);
 
   return (
     <React.Fragment>
-      <div className="container">
-        <div className="ad">
+      <div className={styles.container}>
+        <div className={styles.ad}>
           <div
-            className="editIcon"
+            className={styles.editIcon}
             onClick={() => setOpenEditModal(!openEditModal)}
           >
-            edit
+            <Image src={pencil} height={100} width={100} alt="edit" />
           </div>
-          <div className="content">
-            <div className="textContent">
-              <h1>{props.title}</h1>
-              <p>{props.description}</p>
-            </div>
-            <div className="imageContent">
-              <Image
-                src={props.image as StaticImport}
-                height={100}
-                width={100}
-                alt=""
-              />
-            </div>
+          <div className={styles.textContent}>
+            <h1>{props.title}</h1>
+            <p>{props.description}</p>
           </div>
-          <div className="buttonSection">
+          <div className={styles.imageContent}>
+            <Image src={demoImage} height={100} width={100} alt="" />
+          </div>
+          <div className={styles.buttonSection}>
             <button>{props.buttonText}</button>
           </div>
         </div>
@@ -50,4 +43,4 @@ const Ad3: React.FC<Props> = ({ props }) => {
   );
 };
 
-export default Ad3;
+export default Ad2;
