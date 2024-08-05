@@ -1,7 +1,7 @@
 "use client";
 import { AdProps } from "@/components/BannerImageComp";
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Modal from "@/components/Modal";
 import EditBannerTemplateBs from "@/components/EditBannerTemplateBs";
 import pencil from "../assets/pencil-24.png";
