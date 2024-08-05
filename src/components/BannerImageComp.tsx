@@ -26,10 +26,6 @@ const BannerImageComp: React.FC<AdProps> = (props) => {
     loadStyles();
   }, [props.id]);
 
-  if (loading) {
-    return <Loader />;
-  }
-
   return (
     <React.Fragment>
       {loading ? <Loader /> : <Ad props={props} styles={styles} />}

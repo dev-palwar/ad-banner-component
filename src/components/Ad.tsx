@@ -4,7 +4,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import Modal from "@/components/Modal";
 import EditBannerTemplateBs from "@/components/EditBannerTemplateBs";
-import pencil from "../assets/pencil-24.png";
+import pencil from "../assets/icons/pencil-24.png";
 
 interface Props {
   props: AdProps;

@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react";
 import styles from "./index.module.scss";
 import Image from "next/image";
-import crossIcon from "../../assets/cross.png";
+import crossIcon from "../../assets/icons/cross.png";
 
 interface ModalProps {
   isOpen: boolean;
