@@ -22,7 +22,7 @@ const Slider: React.FC<{ children: React.ReactNode[] }> = ({ children }) => {
       </button>
       <div className={styles.slideContainer}>{children[currentSlide]}</div>
       <button onClick={handleNext} className={styles.nextButton}>
-        <Image src={arrowRight} height={25} width={25} alt="left" />
+        <Image src={arrowRight} height={25} width={25} alt="right" />
       </button>
     </div>
   );
