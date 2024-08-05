@@ -7,7 +7,7 @@
 
     .ad {
         position: relative;
-        background-image: url(../../../assets/template0.png);
+        background-image: url(../assets/template0.png);
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
@@ -19,9 +19,9 @@
         .editIcon {
             cursor: pointer;
             position: absolute;
-            top: 5rem;
-            right: 10px;
-            height: 4vh;
+            top: 69px;
+            right: 9px;
+            height: 3vh;
 
             img {
                 height: 100%;
@@ -38,7 +38,7 @@
         }
 
         .imageContent {
-            border: 2px solid;
+            border: 2px solid whitesmoke;
             height: 39vh;
             position: absolute;
             right: 0;

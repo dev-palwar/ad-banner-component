@@ -2,7 +2,6 @@ import React from "react";
 import styles from "../Ad2/index.module.scss";
 import { AdProps } from "@/components/BannerImageComp";
 import Image from "next/image";
-import demoImage from "../../../assets/nice-m-nshuti-q0iwZZHfBJ0-unsplash.jpg";
 import pencil from "../../../assets/pen.png";
 import Modal from "@/components/Modal";
 import EditBannerTemplateBs from "@/components/EditBannerTemplateBs";
@@ -29,7 +28,12 @@ const Ad3: React.FC<Props> = ({ props }) => {
             <p>{props.description}</p>
           </div>
           <div className={styles.imageContent}>
-            <Image src={demoImage} height={100} width={100} alt="" />
+            <Image
+              src={props.image as string}
+              height={100}
+              width={100}
+              alt=""
+            />
           </div>
           <div className={styles.buttonSection}>
             <button>{props.buttonText}</button>

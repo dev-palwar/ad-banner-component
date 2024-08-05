@@ -1,12 +1,9 @@
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
-import demoImage from "../assets/jarritos-mexican-soda-KPCHBTO8oGM-unsplash.jpg";
 import styles from "../styles/EditBannerTemplateBs.module.scss";
 import { AdProps } from "./BannerImageComp";
 import { useAdContext } from "@/context/AdContext";
-import img1 from "../assets/jarritos-mexican-soda-KPCHBTO8oGM-unsplash.jpg";
-import img2 from "../assets/ignazio-di-gangi-rPJ8tb3xzfk-unsplash.jpg";
-import img3 from "../assets/nice-m-nshuti-q0iwZZHfBJ0-unsplash.jpg";
+import { preDefinedImagesArray } from "../utils/imageMap";
 
 const EditBannerTemplateBs = ({ id }: { id: number }) => {
   const { data, setData } = useAdContext();
@@ -16,6 +13,7 @@ const EditBannerTemplateBs = ({ id }: { id: number }) => {
     description: "",
     buttonText: "",
     cta: "",
+    image: "",
   });
 
   useEffect(() => {
@@ -33,6 +31,13 @@ const EditBannerTemplateBs = ({ id }: { id: number }) => {
     }));
   };
 
+  const handleImageSelect = (image: string) => {
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      image,
+    }));
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setData((prevData) =>
@@ -43,21 +48,30 @@ const EditBannerTemplateBs = ({ id }: { id: number }) => {
   return (
     <div className={styles.container}>
       <div>
-        <Image src={demoImage} width={100} height={100} alt="Banner Image" />
+        <Image
+          src={formData.image}
+          width={100}
+          height={100}
+          alt="Banner Image"
+        />
       </div>
 
       <div className={styles.imageSelectionMenu}>
         <p>Images</p>
         <div className={styles.images}>
-          <div>
-            <Image src={img1} alt="" height={100} width={100} />
-          </div>
-          <div>
-            <Image src={img1} alt="" height={100} width={100} />
-          </div>
-          <div>
-            <Image src={img1} alt="" height={100} width={100} />
-          </div>
+          {preDefinedImagesArray.map((image: string, index: number) => {
+            return (
+              <div key={index}>
+                <Image
+                  src={image}
+                  alt=""
+                  height={100}
+                  width={100}
+                  onClick={() => handleImageSelect(image)}
+                />
+              </div>
+            );
+          })}
         </div>
       </div>
 

@@ -4,20 +4,23 @@
         "title": "Boost your leads",
         "description": "Lorem ipsum dolor sit amet, consectetur",
         "buttonText": "button",
-        "cta": ""
+        "cta": "",
+        "image": "https://i.ibb.co/4dSdp7C/jarritos-mexican-soda-KPCHBTO8o-GM-unsplash.jpg"
     },
     {
         "id": 2,
         "title": "Increase Engagement",
         "description": "Maximize your reach and engagement with our solutions.",
         "buttonText": "Learn More",
-        "cta": "Discover"
+        "cta": "Discover",
+        "image": "https://i.ibb.co/Wx84FrG/nice-m-nshuti-q0iw-ZZHf-BJ0-unsplash.jpg"
     },
     {
         "id": 3,
         "title": "Expand Your Network",
         "description": "Connect with professionals ",
         "buttonText": "Join Now",
-        "cta": "Join"
+        "cta": "Join",
+        "image": "https://i.ibb.co/ZYdjGHZ/ignazio-di-gangi-r-PJ8tb3xzfk-unsplash.jpg"
     }
 ]

@@ -1,11 +1,13 @@
 import BannerImageComp, { AdProps } from "@/components/BannerImageComp";
 import React from "react";
-import demoImage from "../assets/jarritos-mexican-soda-KPCHBTO8oGM-unsplash.jpg";
 import Slider from "@/components/Slider";
 import { useAdContext } from "@/context/AdContext";
 
 const Main = () => {
   const { data } = useAdContext();
+
+  // todo - code structure and image
+  // todo - remove comments
 
   return (
     <Slider>
@@ -17,7 +19,7 @@ const Main = () => {
           description={obj.description}
           buttonText={obj.buttonText}
           cta={obj.cta}
-          image={demoImage}
+          image={obj.image}
         />
       ))}
     </Slider>
