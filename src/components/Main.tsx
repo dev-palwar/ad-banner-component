@@ -6,6 +6,8 @@ import { useAdContext } from "@/context/AdContext";
 const Main = () => {
   const { data } = useAdContext();
 
+  // to-do - fallbacks
+
   return (
     <Slider>
       {data.map((obj: AdProps) => (
