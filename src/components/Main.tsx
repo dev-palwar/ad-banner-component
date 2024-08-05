@@ -6,9 +6,6 @@ import { useAdContext } from "@/context/AdContext";
 const Main = () => {
   const { data } = useAdContext();
 
-  // todo - code structure and image
-  // todo - remove comments
-
   return (
     <Slider>
       {data.map((obj: AdProps) => (

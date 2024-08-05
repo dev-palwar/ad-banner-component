@@ -4,24 +4,15 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import Modal from "@/components/Modal";
 import EditBannerTemplateBs from "@/components/EditBannerTemplateBs";
-import { loadCSSModule } from "@/utils/cssLoader";
 import pencil from "../assets/pencil-24.png";
 
 interface Props {
   props: AdProps;
+  styles: Record<string, string>;
 }
 
-const Ad: React.FC<Props> = ({ props }) => {
+const Ad: React.FC<Props> = ({ props, styles }) => {
   const [openEditModal, setOpenEditModal] = useState<boolean>(false);
-  const [styles, setStyles] = useState<any>({});
-
-  useEffect(() => {
-    const loadStyles = async () => {
-      const loadedStyles = await loadCSSModule(props.id);
-      setStyles(loadedStyles);
-    };
-    loadStyles();
-  }, [props.id]);
 
   return (
     <React.Fragment>
